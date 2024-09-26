@@ -1,0 +1,100 @@
+.footer {
+    &-primary {
+        padding: 3.43rem 0;
+        @include media-breakpoint-down(lg) {
+            padding: 0;
+            border-top: 1px solid #fff;
+        }
+    }
+
+    &-secondary {
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+        border-top: 1px solid #fff;
+        font-size: 15px;
+        @include media-breakpoint-down(lg) {
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+            border-top: none;
+            .row {
+                padding: 0 10px;
+            }
+        }
+    }
+
+    .navbar {
+        &-nav {
+            @include media-breakpoint-up(lg) {
+                justify-content: space-between;
+                align-items: flex-start;
+                > .nav-item > .navitem-link {
+                    pointer-events: none;
+                    @include media-breakpoint-up(lg) {
+                        font-size: 17px;
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav-item {
+            .dropdown-menu {
+                .navitem-link {
+                    margin-right: 0;
+                    @include media-breakpoint-up(lg) {
+                        margin: 6px 0;
+                        padding: 0;
+                        display: inline-block;
+                        background-image: none;
+                        color: #808080;
+                        font-size: 15px;
+                        font-weight: 400;
+                        transition: color 0.4s ease;
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .dropdown-menu {
+            opacity: 1;
+            @include media-breakpoint-up(lg) {
+                margin-top: 15px;
+                padding: 0;
+                min-width: auto;
+                position: relative;
+                background-color: transparent;
+                visibility: visible;
+                transform: translateY(0) scale(1);
+            }
+        }
+    }
+    
+    .small a {
+        color: #fff;
+    }
+
+    .small a:hover{
+        color: #fbc700;
+    }
+    
+    .social-icons {
+        display: flex;
+        align-items: center;
+        li {
+            margin-left: 35px;
+            font-size: 16px;
+            transition: all 0.25s ease-in-out;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+        a {
+            color: #fff;
+        }
+    }
+}
