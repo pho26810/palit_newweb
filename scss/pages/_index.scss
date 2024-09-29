@@ -273,9 +273,9 @@
         margin-left: auto;
         align-items: flex-end;
         justify-content: end;
-        &::before,
         &::after {
             right: 0;
+            clip-path: polygon(var(--tilt-angle) 0, 100% 0, 100% 100%, 0 100%);
         }
     }
     .area__logos {
@@ -304,9 +304,14 @@
     }
     .area__main {
         margin-right: auto;
-        &::before,
         &::after {
             left: 0;
+            clip-path: polygon(
+                0 0,
+                100% 0,
+                var(--remaining-angle) 100%,
+                0 100%
+            );
         }
         @include media-breakpoint-up(lg) {
             order: 1;
@@ -326,6 +331,8 @@
 
 .sec_4,
 .sec_5 {
+    --tilt-angle: 58%;
+    --remaining-angle: calc(100% - var(--tilt-angle));
     position: relative;
     overflow: hidden;
     @include media-breakpoint-up(lg) {
@@ -333,12 +340,18 @@
         max-height: 800px;
         display: flex;
     }
+    @include media-breakpoint-down(xxl) {
+        --tilt-angle: 44%;
+    }
+    @include media-breakpoint-down(xl) {
+        --tilt-angle: 38%;
+    }
     .area {
         &__pic {
             @include media-breakpoint-up(lg) {
                 position: absolute;
                 img {
-                    width: 100%;
+                    width: 101%;
                 }
             }
         }
@@ -350,26 +363,13 @@
                 padding: 75px;
             }
             @include media-breakpoint-up(lg) {
-                &::before,
                 &::after {
                     content: "";
                     position: absolute;
                     top: 0;
                     bottom: 0;
-                    width: 87%;
+                    width: 120%;
                     background-color: #000;
-                }
-                &::before {
-                    width: 30%;
-                }
-                &::after {
-                    transform: skewX(-28deg);
-                    @include media-breakpoint-down(xxl) {
-                        width: 95%;
-                    }
-                    @include media-breakpoint-down(xl) {
-                        width: 100%;
-                    }
                 }
             }
             @include media-breakpoint-down(xxl) {
@@ -497,6 +497,18 @@
     }
     .sec_4,
     .sec_5 {
+        --tilt-angle: 52%;
+        @include media-breakpoint-down(xxl) {
+            --tilt-angle: 40%;
+        }
+        @include media-breakpoint-down(xl) {
+            --tilt-angle: 38%;
+        }
+        .area__main {
+            &::after {
+                width: 125%;
+            }
+        }
         @include media-breakpoint-down(xl) {
             max-height: initial;
             height: auto;
@@ -506,7 +518,6 @@
                 text-align: center;
             }
             .area__main {
-                &::before,
                 &::after {
                     display: none;
                 }
@@ -522,12 +533,6 @@
                 }
             }
             &__main {
-                &::after {
-                    width: 94%;
-                    @include media-breakpoint-down(xxl) {
-                        width: 100%;
-                    }
-                }
                 @include media-breakpoint-down(xl) {
                     align-items: center;
                     position: relative;
