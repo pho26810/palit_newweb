@@ -12751,7 +12751,7 @@ h2 {
     transform: translateX(-7%);
   }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   .sec_4 .area__pic img {
     transform: translateX(0);
   }
@@ -12780,12 +12780,12 @@ h2 {
     transform: translateX(7%);
   }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   .sec_5 .area__pic img {
     transform: translateX(0);
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .sec_5 .sec__header {
     margin-bottom: 30px;
   }
@@ -12798,12 +12798,12 @@ h2 {
   -webkit-clip-path: polygon(0 0, 100% 0, var(--remaining-angle) 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, var(--remaining-angle) 100%, 0 100%);
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .sec_5 .area__main {
     order: 1;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .sec_5 .area__logos {
     order: 2;
   }
@@ -12813,7 +12813,7 @@ h2 {
     margin-right: 30px;
   }
 }
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 1200px) and (max-width: 1365.98px) {
   .sec_5 .area__logos {
     width: 460px;
   }
@@ -12831,7 +12831,7 @@ h2 {
   position: relative;
   overflow: hidden;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .sec_4,
   .sec_5 {
     height: 41.66vw;
@@ -12851,14 +12851,14 @@ h2 {
     --tilt-angle: 38%;
   }
 }
-@media (min-width: 992px) {
+.sec_4 .area__pic img,
+.sec_5 .area__pic img {
+  width: 101%;
+}
+@media (min-width: 1200px) {
   .sec_4 .area__pic,
   .sec_5 .area__pic {
     position: absolute;
-  }
-  .sec_4 .area__pic img,
-  .sec_5 .area__pic img {
-    width: 101%;
   }
 }
 .sec_4 .area__main,
@@ -12873,7 +12873,7 @@ h2 {
     padding: 75px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .sec_4 .area__main::after,
   .sec_5 .area__main::after {
     content: "";
@@ -12890,7 +12890,7 @@ h2 {
     padding: 3rem 2.75rem;
   }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   .sec_4 .area__main,
   .sec_5 .area__main {
     flex-direction: column-reverse;
@@ -12919,7 +12919,7 @@ h2 {
     width: 170px;
   }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   .sec_4 .area__logos,
   .sec_5 .area__logos {
     margin-bottom: 0;
@@ -12953,13 +12953,13 @@ h2 {
   position: relative;
   z-index: 1;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .sec_4 .sec__header,
   .sec_5 .sec__header {
     max-width: 540px;
   }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   .sec_4 .sec__header,
   .sec_5 .sec__header {
     display: flex;
@@ -13001,13 +13001,10 @@ h2 {
     opacity: 1;
   }
 }
-@media (max-width: 1199.98px) {
-  :lang(ru) .sec_4 .area__main {
-    flex-direction: column-reverse;
+@media (min-width: 1200px) {
+  :lang(ru) .sec_5 .sec__header {
+    max-width: 580px;
   }
-}
-:lang(ru) .sec_5 .sec__header {
-  max-width: 580px;
 }
 @media (min-width: 1200px) and (max-width: 1598.98px) {
   :lang(ru) .sec_5 .area__logos {
@@ -13017,14 +13014,6 @@ h2 {
     display: inline-block;
     margin-top: 0 !important;
     margin-bottom: 30px;
-  }
-}
-@media (max-width: 1199.98px) {
-  :lang(ru) .sec_5 .area__logos {
-    width: auto;
-  }
-  :lang(ru) .sec_5 .area__logos li {
-    display: block;
   }
 }
 :lang(ru) .sec_4,
@@ -13046,46 +13035,4 @@ h2 {
 :lang(ru) .sec_4 .area__main::after,
 :lang(ru) .sec_5 .area__main::after {
   width: 125%;
-}
-@media (max-width: 1199.98px) {
-  :lang(ru) .sec_4,
-  :lang(ru) .sec_5 {
-    max-height: initial;
-    height: auto;
-    display: block;
-  }
-  :lang(ru) .sec_4 .sec__header,
-  :lang(ru) .sec_5 .sec__header {
-    margin-bottom: 0;
-    text-align: center;
-  }
-  :lang(ru) .sec_4 .area__main::after,
-  :lang(ru) .sec_5 .area__main::after {
-    display: none;
-  }
-}
-@media (max-width: 1199.98px) {
-  :lang(ru) .sec_4 .area__pic,
-  :lang(ru) .sec_5 .area__pic {
-    position: relative;
-  }
-  :lang(ru) .sec_4 .area__pic img,
-  :lang(ru) .sec_5 .area__pic img {
-    transform: translateX(0);
-  }
-}
-@media (max-width: 1199.98px) {
-  :lang(ru) .sec_4 .area__main,
-  :lang(ru) .sec_5 .area__main {
-    align-items: center;
-    position: relative;
-    background-color: #000;
-  }
-}
-@media (max-width: 1199.98px) {
-  :lang(ru) .sec_4 .area__logos,
-  :lang(ru) .sec_5 .area__logos {
-    margin-bottom: 0;
-    margin-top: 46px;
-  }
 }/*# sourceMappingURL=all.css.map */

@@ -264,7 +264,7 @@
             @include media-breakpoint-down(xxl) {
                 transform: translateX(-7%);
             }
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(xl) {
                 transform: translateX(0);
             }
         }
@@ -292,13 +292,13 @@
             @include media-breakpoint-down(xxl) {
                 transform: translateX(7%);
             }
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(xl) {
                 transform: translateX(0);
             }
         }
     }
     .sec__header {
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(xl) {
             margin-bottom: 30px;
         }
     }
@@ -313,12 +313,12 @@
                 0 100%
             );
         }
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(xl) {
             order: 1;
         }
     }
     .area__logos {
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(xl) {
             order: 2;
         }
         @include media-breakpoint-down(xxl) {
@@ -326,7 +326,7 @@
                 margin-right: 30px;
             }
         }
-        @include media-breakpoint-between(lg, xl) {
+        @media (min-width: 1200px) and (max-width: 1365.98px) {
             width: 460px;
             li {
                 display: inline-block;
@@ -343,7 +343,7 @@
     --remaining-angle: calc(100% - var(--tilt-angle));
     position: relative;
     overflow: hidden;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
         height: 41.66vw;
         max-height: 800px;
         display: flex;
@@ -356,11 +356,11 @@
     }
     .area {
         &__pic {
-            @include media-breakpoint-up(lg) {
+            img {
+                width: 101%;
+            }
+            @include media-breakpoint-up(xl) {
                 position: absolute;
-                img {
-                    width: 101%;
-                }
             }
         }
         &__main {
@@ -370,7 +370,7 @@
             @include media-breakpoint-up(xxl) {
                 padding: 75px;
             }
-            @include media-breakpoint-up(lg) {
+            @include media-breakpoint-up(xl) {
                 &::after {
                     content: "";
                     position: absolute;
@@ -383,7 +383,7 @@
             @include media-breakpoint-down(xxl) {
                 padding: 3rem 2.75rem;
             }
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(xl) {
                 flex-direction: column-reverse;
                 align-items: center;
                 position: relative;
@@ -405,7 +405,7 @@
                     width: 170px;
                 }
             }
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(xl) {
                 margin-bottom: 0;
                 margin-top: 46px;
                 li {
@@ -431,10 +431,10 @@
         z-index: 1;
     }
     .sec__header {
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(xl) {
             max-width: 540px;
         }
-        @include media-breakpoint-down(lg) {
+        @include media-breakpoint-down(xl) {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -480,18 +480,11 @@
 }
 
 :lang(ru) {
-    .sec_4 {
-        .area {
-            &__main {
-                @include media-breakpoint-down(xl) {
-                    flex-direction: column-reverse;
-                }
-            }
-        }
-    }
     .sec_5 {
         .sec__header {
-            max-width: 580px;
+            @include media-breakpoint-up(xl) {
+                max-width: 580px;
+            }
         }
         .area__logos {
             @include media-breakpoint-between(xl, xxl) {
@@ -500,12 +493,6 @@
                     display: inline-block;
                     margin-top: 0 !important;
                     margin-bottom: 30px;
-                }
-            }
-            @include media-breakpoint-down(xl) {
-                width: auto;
-                li {
-                    display: block;
                 }
             }
         }
@@ -522,43 +509,6 @@
         .area__main {
             &::after {
                 width: 125%;
-            }
-        }
-        @include media-breakpoint-down(xl) {
-            max-height: initial;
-            height: auto;
-            display: block;
-            .sec__header {
-                margin-bottom: 0;
-                text-align: center;
-            }
-            .area__main {
-                &::after {
-                    display: none;
-                }
-            }
-        }
-        .area {
-            &__pic {
-                @include media-breakpoint-down(xl) {
-                    position: relative;
-                    img {
-                        transform: translateX(0);
-                    }
-                }
-            }
-            &__main {
-                @include media-breakpoint-down(xl) {
-                    align-items: center;
-                    position: relative;
-                    background-color: #000;
-                }
-            }
-            &__logos {
-                @include media-breakpoint-down(xl) {
-                    margin-bottom: 0;
-                    margin-top: 46px;
-                }
             }
         }
     }
