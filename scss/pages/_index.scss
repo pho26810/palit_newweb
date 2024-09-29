@@ -326,6 +326,14 @@
                 margin-right: 30px;
             }
         }
+        @include media-breakpoint-between(lg, xl) {
+            width: 460px;
+            li {
+                display: inline-block;
+                margin-top: 0 !important;
+                margin-bottom: 30px;
+            }
+        }
     }
 }
 
@@ -393,10 +401,6 @@
                 }
             }
             @include media-breakpoint-down(xxl) {
-                // width: 400px;
-                // display: flex;
-                // flex-wrap: wrap;
-                // align-items: baseline;
                 li {
                     width: 170px;
                 }
@@ -404,6 +408,9 @@
             @include media-breakpoint-down(lg) {
                 margin-bottom: 0;
                 margin-top: 46px;
+                li {
+                    margin-right: 0;
+                }
             }
             @include media-breakpoint-down(md) {
                 width: auto;
@@ -486,11 +493,19 @@
         .sec__header {
             max-width: 580px;
         }
-        @include media-breakpoint-between(xl, xxl) {
-            .area__logos {
+        .area__logos {
+            @include media-breakpoint-between(xl, xxl) {
                 width: 460px;
                 li {
                     display: inline-block;
+                    margin-top: 0 !important;
+                    margin-bottom: 30px;
+                }
+            }
+            @include media-breakpoint-down(xl) {
+                width: auto;
+                li {
+                    display: block;
                 }
             }
         }
