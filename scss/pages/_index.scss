@@ -374,8 +374,8 @@
                 &::after {
                     content: "";
                     position: absolute;
-                    top: 0;
-                    bottom: 0;
+                    top: -1px;
+                    bottom: -1px;
                     width: 120%;
                     background-color: #000;
                 }

@@ -12878,8 +12878,8 @@ h2 {
   .sec_5 .area__main::after {
     content: "";
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: -1px;
+    bottom: -1px;
     width: 120%;
     background-color: #000;
   }
